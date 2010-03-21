@@ -1,0 +1,967 @@
+MPLINK 4.35, Linker
+Linker Map File - Created Sun Mar 21 17:07:59 2010
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+               _entry_scn       code   0x000000    program   0x000006
+REMAPPED_HIGH_INTERRUPT_VECTOR       code   0x000008    program   0x000006
+REMAPPED_LOW_INTERRUPT_VECTOR       code   0x000018    program   0x000006
+                   .cinit    romdata   0x001000    program   0x00000e
+       .code_usb_device.o       code   0x00100e    program   0x0011ac
+ .code_usb_function_cdc.o       code   0x0021ba    program   0x00048e
+             .code_main.o       code   0x002648    program   0x00036e
+.romdata_usb_descriptors.o    romdata   0x0029b6    program   0x0000cd
+.romdata_usb_function_cdc.o    romdata   0x002a83    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x002a83    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x002a83    program   0x000000
+        .idata___init.o_i    romdata   0x002a83    program   0x000000
+.idata_usb_function_cdc.o_i    romdata   0x002a83    program   0x000000
+        .romdata___init.o    romdata   0x002a83    program   0x000000
+    .romdata_usb_device.o    romdata   0x002a83    program   0x000000
+    .idata_usb_device.o_i    romdata   0x002a83    program   0x000000
+.idata_usb_descriptors.o_i    romdata   0x002a83    program   0x000000
+         .idata_c018i.o_i    romdata   0x002a83    program   0x000000
+         .romdata_c018i.o    romdata   0x002a83    program   0x000000
+          .romdata_main.o    romdata   0x002a83    program   0x000000
+            .code_c018i.o       code   0x002a84    program   0x000000
+               _cinit_scn       code   0x002a84    program   0x00009e
+  .code_usb_descriptors.o       code   0x002a84    program   0x000000
+                     PROG       code   0x002b22    program   0x000092
+         .code_fxd3232u.o       code   0x002bb4    program   0x000048
+                   STRING       code   0x002bfc    program   0x000034
+                    .code       code   0x002c30    program   0x000020
+             _startup_scn       code   0x002c50    program   0x00001c
+             .stringtable    romdata   0x002c6c    program   0x000008
+           .code___init.o       code   0x002c74    program   0x000002
+          .idata_main.o_i    romdata   0x002c76    program   0x000003
+    .config_300000_main.o    romdata   0x300000    program   0x000001
+    .config_300001_main.o    romdata   0x300001    program   0x000001
+    .config_300002_main.o    romdata   0x300002    program   0x000001
+    .config_300003_main.o    romdata   0x300003    program   0x000001
+    .config_300005_main.o    romdata   0x300005    program   0x000001
+    .config_300006_main.o    romdata   0x300006    program   0x000001
+    .config_300008_main.o    romdata   0x300008    program   0x000001
+    .config_300009_main.o    romdata   0x300009    program   0x000001
+    .config_30000a_main.o    romdata   0x30000a    program   0x000001
+    .config_30000b_main.o    romdata   0x30000b    program   0x000001
+    .config_30000c_main.o    romdata   0x30000c    program   0x000001
+    .config_30000d_main.o    romdata   0x30000d    program   0x000001
+                MATH_DATA      udata   0x000000       data   0x000014
+                 .tmpdata      udata   0x000014       data   0x000008
+            .udata_main.o      udata   0x000060       data   0x000087
+           .udata_c018i.o      udata   0x0000e7       data   0x00000a
+            .idata_main.o      idata   0x0000f1       data   0x000003
+           .idata_c018i.o      idata   0x0000f4       data   0x000000
+ .udata_usb_descriptors.o      udata   0x0000f4       data   0x000000
+ .idata_usb_descriptors.o      idata   0x0000f4       data   0x000000
+      .idata_usb_device.o      idata   0x0000f4       data   0x000000
+          .idata___init.o      idata   0x0000f4       data   0x000000
+          .udata___init.o      udata   0x0000f4       data   0x000000
+.idata_usb_function_cdc.o      idata   0x0000f4       data   0x000000
+        .idata_fxd3232u.o      idata   0x0000f4       data   0x000000
+        .udata_fxd3232u.o      udata   0x0000f4       data   0x000000
+                   .stack      udata   0x000100       data   0x000040
+      .udata_usb_device.o      udata   0x000140       data   0x000038
+.udata_usb_function_cdc.o      udata   0x000178       data   0x00001b
+                  USB_BDT      udata   0x000200       data   0x000050
+                  usbram2      udata   0x000250       data   0x00008f
+              SFR_BANKED0      udata   0x000f53       data   0x00000d
+            SFR_UNBANKED0      udata   0x000f60       data   0x0000a0
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000008    0x00000d      
+                            0x000018    0x00001d      
+                            0x001000    0x002a82      
+                            0x002a84    0x002c78      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            7318 out of 16408 program addresses used, program memory utilization is 44%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+           BlinkUSBStatus   0x002866    program     extern C:\Users\bashton\Documents\programmer\main.c
+                CDCInitEP   0x002264    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+             CDCTxService   0x0024ee    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                 FXD3232U   0x002bb4    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                 FXM2424U   0x002b22    program     extern C:\MCC18\src\traditional\math\fxm2424u.asm
+         InitializeSystem   0x002720    program     static C:\Users\bashton\Documents\programmer\main.c
+                ProcessIO   0x002824    program     extern C:\Users\bashton\Documents\programmer\main.c
+        Remapped_High_ISR   0x000008    program     extern C:\Users\bashton\Documents\programmer\main.c
+         Remapped_Low_ISR   0x000018    program     extern C:\Users\bashton\Documents\programmer\main.c
+       USBCBCheckOtherReq   0x0028fa    program     extern C:\Users\bashton\Documents\programmer\main.c
+        USBCBErrorHandler   0x0028f8    program     extern C:\Users\bashton\Documents\programmer\main.c
+              USBCBInitEP   0x002900    program     extern C:\Users\bashton\Documents\programmer\main.c
+          USBCBSendResume   0x002904    program     extern C:\Users\bashton\Documents\programmer\main.c
+    USBCBStdSetDscHandler   0x0028fe    program     extern C:\Users\bashton\Documents\programmer\main.c
+             USBCBSuspend   0x0028f2    program     extern C:\Users\bashton\Documents\programmer\main.c
+     USBCBWakeFromSuspend   0x0028f4    program     extern C:\Users\bashton\Documents\programmer\main.c
+        USBCB_SOF_Handler   0x0028f6    program     extern C:\Users\bashton\Documents\programmer\main.c
+              USBCancelIO   0x0020cc    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBCheckCDCRequest   0x0021ba    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+       USBCheckStdRequest   0x0014f0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBConfigureEndpoint   0x001dba    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBCtrlEPService   0x001276    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+ USBCtrlEPServiceComplete   0x0018e0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfInHandler   0x0013e4    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBCtrlTrfOutHandler   0x001396    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfRxService   0x001ba6    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBCtrlTrfSetupHandler   0x001350    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfTxService   0x001a8a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBDeviceAttach   0x00218a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBDeviceDetach   0x00217c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+            USBDeviceInit   0x00100e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+           USBDeviceTasks   0x0010ae    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+        USBEnableEndpoint   0x001e8e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+USBPrepareForNextSetupTrf   0x001484    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBStallEndpoint   0x001efa    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBStallHandler   0x0011f4    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+  USBStdFeatureReqHandler   0x0015b8    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdGetDscHandler   0x0016d0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBStdGetStatusHandler   0x00181e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdSetCfgHandler   0x001ce8    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+               USBSuspend   0x001228    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBTransferOnePacket   0x001fda    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBWakeFromSuspend   0x00124c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+               USB_CD_Ptr   0x002a77    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+               USB_SD_Ptr   0x002a7a    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+USER_USB_CALLBACK_EVENT_HANDLER   0x002920    program     extern C:\Users\bashton\Documents\programmer\main.c
+                 UserInit   0x00272a    program     extern C:\Users\bashton\Documents\programmer\main.c
+  YourHighPriorityISRCode   0x002648    program     extern C:\Users\bashton\Documents\programmer\main.c
+   YourLowPriorityISRCode   0x0026ee    program     extern C:\Users\bashton\Documents\programmer\main.c
+              _2jContinue   0x002c1c    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                   _3jEnd   0x002c26    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+     ___case_114_lbl00061   0x0029a4    program     static                          
+     ___case_115_lbl00057   0x002994    program     static                          
+     ___case_116_lbl00059   0x00299c    program     static                          
+     ___case_117_lbl00058   0x002998    program     static                          
+       ___case_1_lbl00054   0x002988    program     static                          
+       ___case_2_lbl00055   0x00298c    program     static                          
+   ___case_32767_lbl00060   0x0029a0    program     static                          
+       ___case_3_lbl00056   0x002990    program     static                          
+      ___default_lbl00062   0x0029a8    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x00000c    program     static                          
+       ___return_lbl00000   0x002bfa    program     static                          
+       ___return_lbl00001   0x00001c    program     static                          
+       ___return_lbl00001   0x002c6a    program     static                          
+       ___return_lbl00002   0x002b20    program     static                          
+       ___return_lbl00052   0x0029ae    program     static                          
+   ___switchexit_lbl00053   0x0029aa    program     static                          
+               __config_0   0x300000    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_1   0x300001    program     static C:\Users\bashton\Documents\programmer\main.c
+              __config_10   0x30000c    program     static C:\Users\bashton\Documents\programmer\main.c
+              __config_11   0x30000d    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_2   0x300002    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_3   0x300003    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_4   0x300005    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_5   0x300006    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_6   0x300008    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_7   0x300009    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_8   0x30000a    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_9   0x30000b    program     static C:\Users\bashton\Documents\programmer\main.c
+                   __init   0x002c74    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+               __string_0   0x002c6c    program     static C:\Users\bashton\Documents\programmer\main.c
+              __tmplbl_10   0x002984    program     static                          
+               __tmplbl_3   0x00293c    program     static                          
+               __tmplbl_4   0x002948    program     static                          
+               __tmplbl_5   0x002952    program     static                          
+               __tmplbl_6   0x00295c    program     static                          
+               __tmplbl_7   0x002966    program     static                          
+               __tmplbl_8   0x002970    program     static                          
+               __tmplbl_9   0x00297a    program     static                          
+            __zero_memory   0x002c30    program     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                _do_cinit   0x002a84    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                   _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                   _false   0x002bf6    program     static                          
+                 _startup   0x002c50    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                compare_l   0x002c46    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+        configDescriptor1   0x0029c8    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                copy_loop   0x002af6    program     static                          
+            copy_one_byte   0x002afc    program     static                          
+               device_dsc   0x0029b6    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                     done   0x002b20    program     static                          
+             done_copying   0x002b0a    program     static                          
+             getsUSBUSART   0x0022cc    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                     jEnd   0x002c2e    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                    jLoop   0x002c10    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                     loop   0x002c60    program     static                          
+                     loop   0x002bc2    program     static                          
+                   loop_h   0x002c3e    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   loop_l   0x002c48    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     main   0x002714    program     extern C:\Users\bashton\Documents\programmer\main.c
+                   memset   0x002bfc    program     extern C:\MCC18\src\traditional\stdclib\memset.asm
+   mySetLineCodingHandler   0x002772    program     extern C:\Users\bashton\Documents\programmer\main.c
+              putUSBUSART   0x00238e    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+            putrsUSBUSART   0x00244a    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+             putsUSBUSART   0x0023c0    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                    sd000   0x002a0b    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                    sd001   0x002a0f    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                    sd002   0x002a43    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                     test   0x002a9e    program     static                          
+               zero_block   0x002c3e    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    ANSEL   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ANSELH   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ANSELHbits   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                ANSELbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  BAUDCON   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              BAUDCONbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  BAUDCTL   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              BAUDCTLbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      BDT   0x000200       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                      BSR   0x000fe0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              BaudRateGen   0x000187       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+       BothEP0OutUOWNsSet   0x00016b       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+          CDCDataInHandle   0x000184       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+         CDCDataOutHandle   0x000182       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                  CM1CON0   0x000f6d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CM1CON0bits   0x000f6d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  CM2CON0   0x000f6b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CM2CON0bits   0x000f6b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  CM2CON1   0x000f6c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CM2CON1bits   0x000f6c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CtrlTrfData   0x000248       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                     DDRA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    EEADR   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EEADRH   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               EEADRHbits   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                EEADRbits   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EEDATA   0x000fa8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     FSR0   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR1L   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    INDF0   0x000fef       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IOCA   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IOCAbits   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IOCB   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IOCBbits   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     LATA   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+             LastRS232Out   0x0000e1       data     extern C:\Users\bashton\Documents\programmer\main.c
+               NextUSBOut   0x0000e0       data     extern C:\Users\bashton\Documents\programmer\main.c
+                   OSCCON   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  OSCCON2   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              OSCCON2bits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                       PC   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIE1   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PORTA   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      PR2   0x000fcb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PSTRCON   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              PSTRCONbits   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PWM1CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              PWM1CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     RCON   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  REFCON0   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              REFCON0bits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  REFCON1   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              REFCON1bits   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  REFCON2   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              REFCON2bits   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+           RS232_Out_Data   0x0000a0       data     extern C:\Users\bashton\Documents\programmer\main.c
+       RS232_Out_Data_Rdy   0x0000f1       data     extern C:\Users\bashton\Documents\programmer\main.c
+                  RS232cp   0x0000e2       data     extern C:\Users\bashton\Documents\programmer\main.c
+             RemoteWakeup   0x000169       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                     SIGN   0x000000       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                   SLRCON   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SLRCONbits   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    SPBRG   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SPBRGH   0x000fb0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SRCON0   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SRCON0bits   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SRCON1   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SRCON1bits   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SSPMSK   0x000f6f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SSPMSKbits   0x000f6f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 SetupPkt   0x000240       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                    T0CON   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR0H   0x000fd7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    UADDR   0x000f5c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                UADDRbits   0x000f5c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UCFG   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UCFGbits   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UCON   0x000f64       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UCONbits   0x000f64       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEIE   0x000f5b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEIEbits   0x000f5b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEIR   0x000f5f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEIRbits   0x000f5f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP0   0x000f53       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP0bits   0x000f53       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP1   0x000f54       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP1bits   0x000f54       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP2   0x000f55       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP2bits   0x000f55       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP3   0x000f56       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP3bits   0x000f56       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP4   0x000f57       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP4bits   0x000f57       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP5   0x000f58       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP5bits   0x000f58       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP6   0x000f59       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP6bits   0x000f59       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP7   0x000f5a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP7bits   0x000f5a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    UFRMH   0x000f5e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                UFRMHbits   0x000f5e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    UFRML   0x000f5d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                UFRMLbits   0x000f5d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      UIE   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  UIEbits   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      UIR   0x000f62       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  UIRbits   0x000f62       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+   USBActiveConfiguration   0x000141       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+    USBAlternateInterface   0x000142       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+           USBDeviceState   0x000140       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                USBInData   0x000172       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBInMaxPacketSize   0x00016c       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+           USB_Out_Buffer   0x000060       data     extern C:\Users\bashton\Documents\programmer\main.c
+                    USTAT   0x000f63       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                USTATbits   0x000f63       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                USTATcopy   0x00016a       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                 VREFCON0   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+             VREFCON0bits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 VREFCON1   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+             VREFCON1bits   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 VREFCON2   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+             VREFCON2bits   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                        W   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   WDTCON   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     WPUA   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 WPUAbits   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     WPUB   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 WPUBbits   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 __AARGB0   0x000009       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __BARGB0   0x00000e       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB3   0x00000b       data     extern C:\MCC18\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern C:\MCC18\src\traditional\math\barg.asm
+                __FPFLAGS   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                  __REMB0   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB3   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __TEMP   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB3   0x000010       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                  __tmp_0   0x000014       data     static C:\Users\bashton\Documents\programmer\main.c
+                  __tmp_0   0x000014       data     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+              cdc_data_rx   0x000258       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+              cdc_data_tx   0x000298       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+             cdc_mem_type   0x000181       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+               cdc_notice   0x000250       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+               cdc_rx_len   0x000178       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+            cdc_trf_state   0x000179       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+               cdc_tx_len   0x000180       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+     controlTransferState   0x000158       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+    control_signal_bitmap   0x000186       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                curr_byte   0x0000ea       data     static C:\MCC18\src\traditional\startup\c018i.c
+               curr_entry   0x0000ec       data     static C:\MCC18\src\traditional\startup\c018i.c
+                 data_ptr   0x0000ee       data     static C:\MCC18\src\traditional\startup\c018i.c
+              delay_count   0x0000e5       data     static C:\Users\bashton\Documents\programmer\main.c
+dummy_encapsulated_cmd_response   0x00018b       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                  inPipes   0x000159       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         lastTransmission   0x0000e3       data     extern C:\Users\bashton\Documents\programmer\main.c
+                led_count   0x0000f2       data     static C:\Users\bashton\Documents\programmer\main.c
+              line_coding   0x0002d8       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                 outPipes   0x00015f       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+   pBDTEntryEP0OutCurrent   0x000143       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      pBDTEntryEP0OutNext   0x000145       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+              pBDTEntryIn   0x00014f       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+             pBDTEntryOut   0x000147       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  pCDCDst   0x00017d       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                  pCDCSrc   0x00017a       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                     pDst   0x000167       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                     prom   0x0000e7       data     static C:\MCC18\src\traditional\startup\c018i.c
+        shortPacketStatus   0x000157       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x000004    program     static                          
+        Remapped_High_ISR   0x000008    program     extern C:\Users\bashton\Documents\programmer\main.c
+       ___return_lbl00000   0x00000c    program     static                          
+         Remapped_Low_ISR   0x000018    program     extern C:\Users\bashton\Documents\programmer\main.c
+       ___return_lbl00001   0x00001c    program     static                          
+            USBDeviceInit   0x00100e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+           USBDeviceTasks   0x0010ae    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBStallHandler   0x0011f4    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+               USBSuspend   0x001228    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBWakeFromSuspend   0x00124c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBCtrlEPService   0x001276    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBCtrlTrfSetupHandler   0x001350    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBCtrlTrfOutHandler   0x001396    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfInHandler   0x0013e4    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+USBPrepareForNextSetupTrf   0x001484    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBCheckStdRequest   0x0014f0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+  USBStdFeatureReqHandler   0x0015b8    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdGetDscHandler   0x0016d0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBStdGetStatusHandler   0x00181e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+ USBCtrlEPServiceComplete   0x0018e0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfTxService   0x001a8a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfRxService   0x001ba6    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdSetCfgHandler   0x001ce8    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBConfigureEndpoint   0x001dba    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+        USBEnableEndpoint   0x001e8e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBStallEndpoint   0x001efa    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBTransferOnePacket   0x001fda    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+              USBCancelIO   0x0020cc    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBDeviceDetach   0x00217c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBDeviceAttach   0x00218a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBCheckCDCRequest   0x0021ba    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                CDCInitEP   0x002264    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+             getsUSBUSART   0x0022cc    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+              putUSBUSART   0x00238e    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+             putsUSBUSART   0x0023c0    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+            putrsUSBUSART   0x00244a    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+             CDCTxService   0x0024ee    program     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+  YourHighPriorityISRCode   0x002648    program     extern C:\Users\bashton\Documents\programmer\main.c
+   YourLowPriorityISRCode   0x0026ee    program     extern C:\Users\bashton\Documents\programmer\main.c
+                     main   0x002714    program     extern C:\Users\bashton\Documents\programmer\main.c
+         InitializeSystem   0x002720    program     static C:\Users\bashton\Documents\programmer\main.c
+                 UserInit   0x00272a    program     extern C:\Users\bashton\Documents\programmer\main.c
+   mySetLineCodingHandler   0x002772    program     extern C:\Users\bashton\Documents\programmer\main.c
+                ProcessIO   0x002824    program     extern C:\Users\bashton\Documents\programmer\main.c
+           BlinkUSBStatus   0x002866    program     extern C:\Users\bashton\Documents\programmer\main.c
+             USBCBSuspend   0x0028f2    program     extern C:\Users\bashton\Documents\programmer\main.c
+     USBCBWakeFromSuspend   0x0028f4    program     extern C:\Users\bashton\Documents\programmer\main.c
+        USBCB_SOF_Handler   0x0028f6    program     extern C:\Users\bashton\Documents\programmer\main.c
+        USBCBErrorHandler   0x0028f8    program     extern C:\Users\bashton\Documents\programmer\main.c
+       USBCBCheckOtherReq   0x0028fa    program     extern C:\Users\bashton\Documents\programmer\main.c
+    USBCBStdSetDscHandler   0x0028fe    program     extern C:\Users\bashton\Documents\programmer\main.c
+              USBCBInitEP   0x002900    program     extern C:\Users\bashton\Documents\programmer\main.c
+          USBCBSendResume   0x002904    program     extern C:\Users\bashton\Documents\programmer\main.c
+USER_USB_CALLBACK_EVENT_HANDLER   0x002920    program     extern C:\Users\bashton\Documents\programmer\main.c
+               __tmplbl_3   0x00293c    program     static                          
+               __tmplbl_4   0x002948    program     static                          
+               __tmplbl_5   0x002952    program     static                          
+               __tmplbl_6   0x00295c    program     static                          
+               __tmplbl_7   0x002966    program     static                          
+               __tmplbl_8   0x002970    program     static                          
+               __tmplbl_9   0x00297a    program     static                          
+              __tmplbl_10   0x002984    program     static                          
+       ___case_1_lbl00054   0x002988    program     static                          
+       ___case_2_lbl00055   0x00298c    program     static                          
+       ___case_3_lbl00056   0x002990    program     static                          
+     ___case_115_lbl00057   0x002994    program     static                          
+     ___case_117_lbl00058   0x002998    program     static                          
+     ___case_116_lbl00059   0x00299c    program     static                          
+   ___case_32767_lbl00060   0x0029a0    program     static                          
+     ___case_114_lbl00061   0x0029a4    program     static                          
+      ___default_lbl00062   0x0029a8    program     static                          
+   ___switchexit_lbl00053   0x0029aa    program     static                          
+       ___return_lbl00052   0x0029ae    program     static                          
+               device_dsc   0x0029b6    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+        configDescriptor1   0x0029c8    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                    sd000   0x002a0b    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                    sd001   0x002a0f    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                    sd002   0x002a43    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+               USB_CD_Ptr   0x002a77    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+               USB_SD_Ptr   0x002a7a    program     extern C:\Users\bashton\Documents\programmer\usb_descriptors.c
+                _do_cinit   0x002a84    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     test   0x002a9e    program     static                          
+                copy_loop   0x002af6    program     static                          
+            copy_one_byte   0x002afc    program     static                          
+             done_copying   0x002b0a    program     static                          
+                     done   0x002b20    program     static                          
+       ___return_lbl00002   0x002b20    program     static                          
+                 FXM2424U   0x002b22    program     extern C:\MCC18\src\traditional\math\fxm2424u.asm
+                 FXD3232U   0x002bb4    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                     loop   0x002bc2    program     static                          
+                   _false   0x002bf6    program     static                          
+       ___return_lbl00000   0x002bfa    program     static                          
+                   memset   0x002bfc    program     extern C:\MCC18\src\traditional\stdclib\memset.asm
+                    jLoop   0x002c10    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+              _2jContinue   0x002c1c    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                   _3jEnd   0x002c26    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                     jEnd   0x002c2e    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+            __zero_memory   0x002c30    program     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               zero_block   0x002c3e    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   loop_h   0x002c3e    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+                compare_l   0x002c46    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   loop_l   0x002c48    program     static C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 _startup   0x002c50    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x002c60    program     static                          
+       ___return_lbl00001   0x002c6a    program     static                          
+               __string_0   0x002c6c    program     static C:\Users\bashton\Documents\programmer\main.c
+                   __init   0x002c74    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+               __config_0   0x300000    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_1   0x300001    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_2   0x300002    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_3   0x300003    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_4   0x300005    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_5   0x300006    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_6   0x300008    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_7   0x300009    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_8   0x30000a    program     static C:\Users\bashton\Documents\programmer\main.c
+               __config_9   0x30000b    program     static C:\Users\bashton\Documents\programmer\main.c
+              __config_10   0x30000c    program     static C:\Users\bashton\Documents\programmer\main.c
+              __config_11   0x30000d    program     static C:\Users\bashton\Documents\programmer\main.c
+                     SIGN   0x000000       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                  __REMB3   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB0   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB0   0x000009       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __BARGB3   0x00000b       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB0   0x00000e       data     extern C:\MCC18\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __TEMPB3   0x000010       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                   __TEMP   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                  __tmp_0   0x000014       data     static C:\Users\bashton\Documents\programmer\main.c
+                  __tmp_0   0x000014       data     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+           USB_Out_Buffer   0x000060       data     extern C:\Users\bashton\Documents\programmer\main.c
+           RS232_Out_Data   0x0000a0       data     extern C:\Users\bashton\Documents\programmer\main.c
+               NextUSBOut   0x0000e0       data     extern C:\Users\bashton\Documents\programmer\main.c
+             LastRS232Out   0x0000e1       data     extern C:\Users\bashton\Documents\programmer\main.c
+                  RS232cp   0x0000e2       data     extern C:\Users\bashton\Documents\programmer\main.c
+         lastTransmission   0x0000e3       data     extern C:\Users\bashton\Documents\programmer\main.c
+              delay_count   0x0000e5       data     static C:\Users\bashton\Documents\programmer\main.c
+                     prom   0x0000e7       data     static C:\MCC18\src\traditional\startup\c018i.c
+                curr_byte   0x0000ea       data     static C:\MCC18\src\traditional\startup\c018i.c
+               curr_entry   0x0000ec       data     static C:\MCC18\src\traditional\startup\c018i.c
+                 data_ptr   0x0000ee       data     static C:\MCC18\src\traditional\startup\c018i.c
+       RS232_Out_Data_Rdy   0x0000f1       data     extern C:\Users\bashton\Documents\programmer\main.c
+                led_count   0x0000f2       data     static C:\Users\bashton\Documents\programmer\main.c
+           USBDeviceState   0x000140       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBActiveConfiguration   0x000141       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+    USBAlternateInterface   0x000142       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+   pBDTEntryEP0OutCurrent   0x000143       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+      pBDTEntryEP0OutNext   0x000145       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+             pBDTEntryOut   0x000147       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+              pBDTEntryIn   0x00014f       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+        shortPacketStatus   0x000157       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     controlTransferState   0x000158       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  inPipes   0x000159       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                 outPipes   0x00015f       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                     pDst   0x000167       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+             RemoteWakeup   0x000169       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                USTATcopy   0x00016a       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       BothEP0OutUOWNsSet   0x00016b       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBInMaxPacketSize   0x00016c       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                USBInData   0x000172       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+               cdc_rx_len   0x000178       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+            cdc_trf_state   0x000179       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                  pCDCSrc   0x00017a       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                  pCDCDst   0x00017d       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+               cdc_tx_len   0x000180       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+             cdc_mem_type   0x000181       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+         CDCDataOutHandle   0x000182       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+          CDCDataInHandle   0x000184       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+    control_signal_bitmap   0x000186       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+              BaudRateGen   0x000187       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+dummy_encapsulated_cmd_response   0x00018b       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                      BDT   0x000200       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+                 SetupPkt   0x000240       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+              CtrlTrfData   0x000248       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+               cdc_notice   0x000250       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+              cdc_data_rx   0x000258       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+              cdc_data_tx   0x000298       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+              line_coding   0x0002d8       data     extern C:\Microchip Solutions\Microchip\USB\CDC Device Driver\usb_function_cdc.c
+                 UEP0bits   0x000f53       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP0   0x000f53       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP1   0x000f54       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP1bits   0x000f54       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP2bits   0x000f55       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP2   0x000f55       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP3bits   0x000f56       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP3   0x000f56       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP4bits   0x000f57       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP4   0x000f57       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP5   0x000f58       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP5bits   0x000f58       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP6bits   0x000f59       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP6   0x000f59       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEP7   0x000f5a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEP7bits   0x000f5a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEIEbits   0x000f5b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEIE   0x000f5b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    UADDR   0x000f5c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                UADDRbits   0x000f5c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                UFRMLbits   0x000f5d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    UFRML   0x000f5d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                UFRMHbits   0x000f5e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    UFRMH   0x000f5e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UEIR   0x000f5f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UEIRbits   0x000f5f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      UIE   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  UIEbits   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UCFGbits   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UCFG   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  UIRbits   0x000f62       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      UIR   0x000f62       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    USTAT   0x000f63       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                USTATbits   0x000f63       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 UCONbits   0x000f64       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     UCON   0x000f64       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SRCON0bits   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SRCON0   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SRCON1bits   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SRCON1   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CM2CON0bits   0x000f6b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  CM2CON0   0x000f6b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  CM2CON1   0x000f6c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CM2CON1bits   0x000f6c       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  CM1CON0   0x000f6d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CM1CON0bits   0x000f6d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SSPMSKbits   0x000f6f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SSPMSK   0x000f6f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               SLRCONbits   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SLRCON   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 WPUAbits   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     WPUA   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 WPUBbits   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     WPUB   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IOCAbits   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IOCA   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IOCB   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IOCBbits   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    ANSEL   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                ANSELbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ANSELH   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ANSELHbits   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PORTA   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     LATA   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     DDRA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIE1   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EEDATA   0x000fa8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                EEADRbits   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    EEADR   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   EEADRH   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               EEADRHbits   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    SPBRG   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SPBRGH   0x000fb0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              PWM1CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PWM1CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  BAUDCTL   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              BAUDCTLbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              BAUDCONbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  BAUDCON   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              PSTRCONbits   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PSTRCON   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              REFCON0bits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  REFCON0   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+             VREFCON0bits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 VREFCON0   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  REFCON1   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              REFCON1bits   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 VREFCON1   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+             VREFCON1bits   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  REFCON2   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              REFCON2bits   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 VREFCON2   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+             VREFCON2bits   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      PR2   0x000fcb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     RCON   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   WDTCON   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  OSCCON2   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              OSCCON2bits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   OSCCON   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    T0CON   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    TMR0H   0x000fd7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      BSR   0x000fe0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR1L   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                        W   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     FSR0   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    INDF0   0x000fef       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                       PC   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\src\traditional\proc\p18F14K50.asm
+
+
