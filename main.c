@@ -48,7 +48,6 @@
 #include "./USB/usb.h"
 #include "./USB/usb_device.h"
 #include "./USB/usb_function_cdc.h"
-
 #include "HardwareProfile.h"
 
 /** CONFIGURATION **************************************************/
@@ -57,7 +56,7 @@
         //14K50
         #pragma config CPUDIV = NOCLKDIV
         #pragma config USBDIV = OFF
-        #pragma config FOSC   = HS
+        #pragma config FOSC   = IRC
         #pragma config PLLEN  = ON
         #pragma config FCMEN  = OFF
         #pragma config IESO   = OFF
@@ -91,14 +90,9 @@
 /** V A R I A B L E S ********************************************************/
 #pragma udata
 char USB_Out_Buffer[CDC_DATA_OUT_EP_SIZE];
-char RS232_Out_Data[CDC_DATA_IN_EP_SIZE];
-
 unsigned char  NextUSBOut;
 unsigned char    NextUSBOut;
-//char RS232_In_Data;
-unsigned char    LastRS232Out;  // Number of characters in the buffer
-unsigned char    RS232cp;       // current position within the buffer
-unsigned char RS232_Out_Data_Rdy = 0;
+
 USB_HANDLE  lastTransmission;
 
 //BOOL stringPrinted;
@@ -434,10 +428,10 @@ void UserInit(void)
     }
 
 	NextUSBOut = 0;
-	LastRS232Out = 0;
 	lastTransmission = 0;
 
 	mInitAllLEDs();
+	clrtgtprg();
 }//end UserInit
 
 /******************************************************************************
@@ -550,6 +544,7 @@ void ProcessIO(void)
 void BlinkUSBStatus(void)
 {
     static WORD led_count=0;
+	char a=0;
     
     if(led_count == 0)led_count = 10000U;
     led_count--;
@@ -558,7 +553,13 @@ void BlinkUSBStatus(void)
     #define mLED_Both_On()          {mLED_1_On();mLED_2_On();}
     #define mLED_Only_1_On()        {mLED_1_On();mLED_2_Off();}
     #define mLED_Only_2_On()        {mLED_1_Off();mLED_2_On();}
-
+	a = is_clear();
+	if(a=1)
+	{
+		mLED_3_On();
+	}else{
+		mLED_3_Off();
+	}
     if(USBSuspendControl == 1)
     {
         if(led_count==0)
