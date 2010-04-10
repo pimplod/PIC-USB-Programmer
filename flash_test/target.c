@@ -22,10 +22,41 @@
 #include "Compiler.h"
 
 /** V A R I A B L E S ********************************************************/
+        //14K50
+        #pragma config CPUDIV = NOCLKDIV
+        #pragma config USBDIV = OFF
+        #pragma config FOSC   = IRC
+        #pragma config PLLEN  = ON
+        #pragma config FCMEN  = OFF
+        #pragma config IESO   = OFF
+        #pragma config PWRTEN = OFF
+        #pragma config BOREN  = OFF
+        #pragma config BORV   = 30
+//        #pragma config VREGEN = ON
+        #pragma config WDTEN  = OFF
+        #pragma config WDTPS  = 32768
+        #pragma config MCLRE  = OFF
+        #pragma config HFOFST = OFF
+        #pragma config STVREN = ON
+        #pragma config LVP    = OFF
+        #pragma config XINST  = OFF
+        #pragma config BBSIZ  = OFF
+        #pragma config CP0    = OFF
+        #pragma config CP1    = OFF
+        #pragma config CPB    = OFF
+        #pragma config WRT0   = OFF
+        #pragma config WRT1   = OFF
+        #pragma config WRTB   = OFF
+        #pragma config WRTC   = OFF
+        #pragma config EBTR0  = OFF
+        #pragma config EBTR1  = OFF
+        #pragma config EBTRB  = OFF     
+extern void erasemem (void);
+
 
 #pragma udata
 ROM const char Target_Code[]={		//Allocate 4kB for persistant code
-			0x00,0x00,0xff,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+			0xff,0xff,0xff,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 			0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 			0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 			0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
@@ -441,23 +472,8 @@ ROM const char Target_Code[]={		//Allocate 4kB for persistant code
 			0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 			0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
 			0x00,0x00};
-
 #pragma code
-
-void clrtgtprg(void)
-{
-	TBLPTR = *Target_Code;
-	EECON1bits.EEPGD = 1;
-	EECON1bits.CFGS = 0;
-	EECON1bits.WREN = 1;
-	EECON1bits.FREE = 1;
-	INTCONbits.GIE = 0;
-	EECON2 = 0x55;
-	EECON2 = 0xAA;
-	EECON1bits.WR = 1;
-	Nop();
-	INTCONbits.GIE = 1;
-}
+unsigned char target_code_loc;
 
 char is_clear(void)
 {
@@ -467,4 +483,10 @@ char is_clear(void)
 	}else{
 		return(0);
 	}
+}
+
+void main(void){
+	target_code_loc=*Target_Code;
+	erasemem();
+	while(1);
 }
